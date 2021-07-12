@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.aiden.cupcake.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_oneHomeFragment"
+            app:destination="@id/oneHomeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_twoHomeFragment"
+            app:destination="@id/twoHomeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_threeHomeFragment"
+            app:destination="@id/threeHomeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.aiden.cupcake.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.aiden.cupcake.AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/oneHomeFragment"
+        android:name="com.aiden.cupcake.OneHomeFragment"
+        android:label="Home One"
+        tools:layout="@layout/fragment_one_home">
+        <action
+            android:id="@+id/action_oneHomeFragment_to_twoHomeFragment"
+            app:destination="@id/twoHomeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_oneHomeFragment_to_threeHomeFragment"
+            app:destination="@id/threeHomeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/twoHomeFragment"
+        android:name="com.aiden.cupcake.TwoHomeFragment"
+        android:label="Home Two"
+        tools:layout="@layout/fragment_two_home">
+        <action
+            android:id="@+id/action_twoHomeFragment_to_oneHomeFragment"
+            app:destination="@id/oneHomeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_twoHomeFragment_to_threeHomeFragment"
+            app:destination="@id/threeHomeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/threeHomeFragment"
+        android:name="com.aiden.cupcake.ThreeHomeFragment"
+        android:label="Home Three"
+        tools:layout="@layout/fragment_three_home">
+        <action
+            android:id="@+id/action_threeHomeFragment_to_twoHomeFragment"
+            app:destination="@id/twoHomeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_threeHomeFragment_to_oneHomeFragment"
+            app:destination="@id/oneHomeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_threeHomeFragment_to_accountFragment"
+            app:destination="@id/accountFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment><action android:id="@+id/action_global_homeFragment3" app:destination="@id/homeFragment"/>
+
+</navigation>

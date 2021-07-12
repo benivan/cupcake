@@ -36,6 +36,9 @@ class OneHomeFragment : Fragment() {
             val action = OneHomeFragmentDirections.actionOneHomeFragmentToThreeHomeFragment()
             it.findNavController().navigate(action)
         }
+        binding.button.setOnClickListener {
+            it.findNavController().navigate(R.id.action_global_homeFragment3)
+        }
     }
 
 

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
+import androidx.navigation.findNavController
 import com.aiden.cupcake.databinding.FragmentHomeBinding
 
 
@@ -38,6 +39,19 @@ class HomeFragment : Fragment() {
                 null
             )
         )
+
+        binding.btnHomeOne.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToOneHomeFragment()
+            it.findNavController().navigate(action)
+        }
+        binding.btnHomeTwo.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToTwoHomeFragment()
+            it.findNavController().navigate(action)
+        }
+        binding.btnHomeThree.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToThreeHomeFragment()
+            it.findNavController().navigate(action)
+        }
 
     }
 }
